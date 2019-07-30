@@ -4,8 +4,7 @@ metadata:
   name: mariadb2
 spec:
   ports:
-  - port: 3307
-    targetPort: 3306
+  - port: 3306
   selector:
     app: mariadb2
   clusterIP: None
