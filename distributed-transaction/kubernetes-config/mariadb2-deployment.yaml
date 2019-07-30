@@ -32,7 +32,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           value: mypass
         ports:
-        - containerPort: 3307
+        - containerPort: 3306
           name: mariadb2
         volumeMounts:
         - name: mariadb-persistent-storage
