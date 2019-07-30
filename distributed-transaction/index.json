@@ -1,0 +1,35 @@
+{
+    "title": "Distributed Transaction Scanario",
+    "description": "Distributed Transaction Scanario",
+    "difficulty": "beginner",
+    "time": "15 minutes",
+    "details": {
+      "steps": [{
+        "title": "Step 1 - Start Kubernetes",
+        "text": "step1.md"
+      }, {
+        "title": "Step 2 - Start MariaDB",
+        "text": "step2.md"
+      }, {
+        "title": "Step 3 - Start Frontend",
+        "text": "step3.md"
+      }],
+      "intro": {
+        "text": "intro.md",
+        "courseData": "courseBase.sh",
+        "credits": ""
+      }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
+        "uieditorpath": "/root",
+        "uisettings": "yaml"
+    },
+    "backend": {
+        "imageid": "kubernetes-cluster-running"
+    }
+  }
+  

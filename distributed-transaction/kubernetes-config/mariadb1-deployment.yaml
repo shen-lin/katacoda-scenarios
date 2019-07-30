@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mariadb1
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: mariadb1
+  clusterIP: None
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: mariadb1
+spec:
+  selector:
+    matchLabels:
+      app: mariadb1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mariadb1
+    spec:
+      containers:
+      - image: mariadb/server:10.3
+        name: mariadb1
+        env:
+          # Use secret in real usage
+        - name: MYSQL_ROOT_PASSWORD
+          value: mypass
+        ports:
+        - containerPort: 3306
+          name: mariadb1
+        volumeMounts:
+        - name: mariadb-persistent-storage
+          mountPath: /var/lib/mariadb
+      volumes:
+      - name: mariadb-persistent-storage
+        persistentVolumeClaim:
+          claimName: mariadb1-pv-claim

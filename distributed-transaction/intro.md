@@ -1,0 +1,1 @@
+This is a scenario to demostrate a distributed transaction between two MariaDB databases.
