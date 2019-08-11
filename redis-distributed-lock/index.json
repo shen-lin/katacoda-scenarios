@@ -28,6 +28,7 @@
     },
     "environment": {
         "showdashboard": true,
+        "dashboards": [{"name": "Display 32100", "port": 32100}],
         "dashboard": "Open Web App",
         "uilayout": "terminal",
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
