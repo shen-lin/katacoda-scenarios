@@ -11,8 +11,11 @@
         "title": "Step 2 - Start Redis Cluster",
         "text": "step2.md"          
       }, {
-        "title": "Step 3 - Start Web App",
+        "title": "Step 3 - Start Frontend Web App",
         "text": "step3.md"          
+      }, {
+        "title": "Step 4 - Testing Distributed Lock from Web App",
+        "text": "step4.md"          
       }],
       "intro": {
         "text": "intro.md",
@@ -25,7 +28,7 @@
     },
     "environment": {
         "showdashboard": true,
-        "dashboard": "Dashboard",
+        "dashboard": "Open Web App",
         "uilayout": "terminal",
         "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n",
         "uieditorpath": "/root/tutorial",
