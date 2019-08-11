@@ -20,4 +20,6 @@ After two deposits, the eventual balance has incorrect value 3.
 
 The distributed lock used in this scenario makes sure only one process is accessing the balance resource. 
 
+Note: 
 
+Some enhancements are required on the redis clients. The client holding the lock should keep extend it if it is still accessing the resource when its lock is getting expired. And if the client failed to extend the lock, it shouldn't access the resource any more.
